@@ -111,6 +111,10 @@ This `docker-compose.yml` file defines a multi-container Docker application cons
    ```bash
    docker-compose up -d
    ```
+
+   ![docker up](<images/docker compose up.png>)
+
+   
 3. Access the services:
    - WordPress: `http://localhost:8080`
    - phpMyAdmin: `http://localhost:8081`
