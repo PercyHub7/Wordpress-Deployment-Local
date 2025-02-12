@@ -28,7 +28,7 @@ This `docker-compose.yml` file defines a multi-container Docker application cons
    - **`volumes: - db-data:/var/lib/mysql`**: Persists the database data in a named volume (`db-data`) to ensure data survival across container restarts.
    - **`networks: - wordpress-network`**: Connects the database service to the `wordpress-network`.
 
-   ![Database](./images/Screenshot 2025-02-12 173422.png)
+   ![Database](.images/Database code.png)
 
 
 ##### b) **phpMyAdmin Service**
