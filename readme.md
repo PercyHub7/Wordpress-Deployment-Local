@@ -42,6 +42,9 @@ This `docker-compose.yml` file defines a multi-container Docker application cons
      - `MYSQL_ROOT_PASSWORD`: Root password for the database (value comes from `.env`).
    - **`networks: - wordpress-network`**: Connects the phpMyAdmin service to the `wordpress-network`.
 
+   ![phpmyadmin](<images/phpmyadmin code.png>)
+
+
 ##### c) **WordPress Service**
    - **`depends_on: - database`**: Ensures that the WordPress container starts only after the database container is running.
    - **`image: wordpress:6.2.2-apache`**: Uses the official WordPress Docker image with Apache version `6.2.2`.
@@ -56,6 +59,9 @@ This `docker-compose.yml` file defines a multi-container Docker application cons
    - **`volumes: - ./:/var/www/html`**: Mounts the current directory (`./`) on the host machine to the `/var/www/html` directory inside the container, enabling live updates to WordPress files.
    - **`networks: - wordpress-network`**: Connects the WordPress service to the `wordpress-network`.
 
+![wordpress](<images/wordpress code.png>)
+
+
 ---
 
 #### 3. **Volumes**
@@ -66,6 +72,9 @@ This `docker-compose.yml` file defines a multi-container Docker application cons
 #### 4. **Networks**
    - **`wordpress-network`**:
      - **`driver: bridge`**: Creates a custom bridge network named `wordpress-network` to facilitate communication between the containers (`database`, `phpmyadmin`, and `wordpress`).
+
+![volumes](<images/Screenshot 2025-02-12 173636.png>)
+
 
 ---
 
