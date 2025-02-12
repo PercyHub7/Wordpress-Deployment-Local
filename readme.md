@@ -141,3 +141,11 @@ This `docker-compose.yml` file defines a multi-container Docker application cons
 - The `depends_on` directive ensures proper startup order but does not guarantee that the dependent services are fully ready. For critical applications, consider implementing health checks.
 - The `volumes` section ensures data persistence for the database and enables live updates for WordPress files.
 - The `networks` section facilitates seamless communication between the containers.
+
+###	Docker Desktop Snapshot of containers, images and volumes in Local
+
+![container](<images/Docker Containers.png>)
+
+![images](<images/Docker images.png>)
+
+![volumes](<images/Docker volumes.png>)
