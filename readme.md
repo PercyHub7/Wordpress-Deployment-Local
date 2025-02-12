@@ -107,6 +107,10 @@ This `docker-compose.yml` file defines a multi-container Docker application cons
 
 ### Usage Instructions
 1. Save the `docker-compose.yml` file and create the `.env` file with the required variables.
+
+![env](<images/env file.png>)
+
+
 2. Run the following command to start the services:
    ```bash
    docker-compose up -d
@@ -114,10 +118,18 @@ This `docker-compose.yml` file defines a multi-container Docker application cons
 
    ![docker up](<images/docker compose up.png>)
 
-   
+
 3. Access the services:
    - WordPress: `http://localhost:8080`
+
+	![wp home](<images/Wordpress homepage.png>)
+
+
    - phpMyAdmin: `http://localhost:8081`
+
+   ![php home](<images/phpMyAdmin homepage.png>)
+
+
 4. To stop the services, run:
    ```bash
    docker-compose down
