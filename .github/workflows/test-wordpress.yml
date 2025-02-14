@@ -1,0 +1,22 @@
+name: Test WordPress Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-wordpress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+
+      - name: Pull the WordPress Image
+        run: docker pull percy7/wordpress:6.2.2-apache
+
+      - name: Run the WordPress Container
+        run: docker run --name some-wordpress -d percy7/wordpress:6.2.2-apache
+
+      - name: Check if the Container is Running
+        run: docker ps | grep some-wordpress
